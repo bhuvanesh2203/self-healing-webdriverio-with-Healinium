@@ -24,11 +24,13 @@ Healenium Architecture Components
 * Supports analytics, reporting, and allows the backend to remember successful locators.
 
 Steps to setup the Project:
+```sh
 git clone https://github.com/bhuvanesh2203/self-healing-webdriverio-with-Healinium.git
 cd self-healing-webdriverio-with-Healinium
 npm install
 cd Healinium
 docker-compose up -d
+```
 This command starts the necessary Healenium services, including the selenium grid,proxy, backend, selector limitator, and PostgreSQL database.
 
 Once the containers are started validate if we are able to access the below services in corresponding ports
@@ -39,11 +41,13 @@ Once the containers are started validate if we are able to access the below serv
 Now with the above steps the healinium services should be up and running and time to integrate with our JavaScript/Webdriver Framework.
 
 In the wdio config for the selenium grid configuration mention the HLM proxy's port 
+```javascript
 services: [],
 hostname: '127.0.0.1',
 port: 8085, // Healenium proxy
 protocol: 'http',
-
+```
+```
 Project Structure:
 self-healing-webdriverio-with-Healinium/
 ├── healenium/              # Healenium-related configurations and scripts
@@ -57,7 +61,7 @@ self-healing-webdriverio-with-Healinium/
 ├── package.json            # Project metadata and dependencies
 ├── package-lock.json       # Exact versions of installed dependencies
 └── README.md               # Project documentation
-
+```
 
 Sample demo:
 
